@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="cloudvisual">
+<head>
+  <meta charset="utf-8">
+  <title>cloudvisual</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <section>
+    <div class="container" ng-view></div>
+  </section>
+  <section>
+    <footer>
+      cloudvisual: v<span app-version></span>
+    </footer>
+  </section>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

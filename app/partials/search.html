@@ -1,0 +1,25 @@
+<div id="searchBox">
+  <input id="searchInput" type="text" name="searchQuery" ng-model="search.query" ng-change="updateQuery(search.query)" ng-keydown="keyDown($event)"></input>
+</div>
+<div id="searchResults">
+  <p ng-show="!tracks">No Results Found</p>
+  <ul ng-show="tracks">
+    <li ng-repeat="track in tracks" ng-class="{selected: $index == search.selected}">
+      <img class="img" 
+           ng-src="{{(track.artwork_url)}}"
+           height="100"
+           width="100" ng-show="track.artwork_url">
+      <img class="img" 
+           ng-src="{{(track.user.avatar_url)}}"
+           height="100"
+           width="100" ng-show="!track.artwork_url">
+      <span class="track info">
+        <a class="track user"
+           href="{{track.user.permalink_url}}"
+           target="_blank"
+           tabindex="-1">{{track.user.username}}</a>
+        <span class="track title">{{track.title.substring(0,40)}}</span>
+      </span>
+    </li>
+  </ul> 
+</div>

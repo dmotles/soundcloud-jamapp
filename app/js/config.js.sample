@@ -1,0 +1,4 @@
+SC.initialize({
+  // YOUR SOUNDCLOUD API CLIENT ID HERE
+  client_id: ''
+});
